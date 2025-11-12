@@ -21,7 +21,6 @@ export const ProductList = ({ products }: ProductListProps) => {
     maxPrice: Infinity,
   });
 
-  // Filter products based on search term, category, and price range
   const filteredProducts = products.filter((product) => {
     const matchesSearch = product.ten
       .toLowerCase()
@@ -34,13 +33,11 @@ export const ProductList = ({ products }: ProductListProps) => {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  // Calculate pagination
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
 
-  // Reset to page 1 when filters change
   const handleFilterChange = (newFilters: FilterOptions) => {
     setFilters(newFilters);
     setCurrentPage(1);

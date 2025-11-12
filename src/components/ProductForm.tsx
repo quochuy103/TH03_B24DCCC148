@@ -47,7 +47,6 @@ export const ProductForm = ({ isEditing = false }: ProductFormProps) => {
 
   const [errors, setErrors] = useState<FormErrors>({});
 
-  // Load product data if editing
   useEffect(() => {
     if (isEditing && id) {
       const product = products.find((p) => p.id === parseInt(id));
@@ -107,7 +106,6 @@ export const ProductForm = ({ isEditing = false }: ProductFormProps) => {
       ...prev,
       [field]: value,
     }));
-    // Clear error for this field when user starts typing
     if (errors[field]) {
       setErrors((prev) => ({
         ...prev,

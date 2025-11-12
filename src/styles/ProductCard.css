@@ -1,4 +1,3 @@
-/* ProductCard Styles */
 .product-card {
   background: white;
   border-radius: 8px;
@@ -56,8 +55,6 @@
   margin: 0;
   flex: 1;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 

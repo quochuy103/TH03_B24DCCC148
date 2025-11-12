@@ -1,4 +1,3 @@
-/* App Styles */
 * {
   margin: 0;
   padding: 0;
@@ -119,7 +118,6 @@ body {
   }
 }
 
-/* Buttons */
 .btn {
   padding: 0.5rem 1rem;
   border: none;
@@ -164,7 +162,6 @@ body {
   cursor: not-allowed;
 }
 
-/* Not Found Page */
 .not-found-page {
   text-align: center;
   padding: 3rem 2rem;
